@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN" ng-app="appMbvf" ng-controller="MainCtrl">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+        <title>{{ Page.title() }} - Meloduet Bilibili Video Fetcher</title>
+        <script src="http://cdn.bootcss.com/angular.js/1.5.8/angular.js" type="text/javascript" charset="utf-8"></script>
+        <script src="http://cdn.bootcss.com/angular.js/1.5.8/angular-route.min.js" type="text/javascript" charset="utf-8"></script>
+        <!-- 然后是手码的部分 -->
+        <script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/controllers.js"></script>
+        <script src="js/util.js"></script>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="js/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- Bootstrap theme -->
+        <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Meloduet Bilibili Video Fetcher</h1>
+
+            <div class="row">
+                <blockquote>
+                    <p class="lead" style="text-indent:2em;">
+                        Meloduet Bilibili Video Fetcher是一个开源的Bilibili辅助工具, 你可以把它用来方便地获取视频的真实地址以便于下载或其它用途.
+                    </p>
+                </blockquote>
+                <hr />
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li role="presentation" ng-class="{ 'active': 0 == Page.index() }">
+                            <a href="#/home.html">首页</a>
+                        </li>
+                        <li role="presentation" ng-class="{ 'active': 1 == Page.index() }">
+                            <a href="#/about.html">关于</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="https://github.com/Zhangzijing/Meloduet-Bilibili-Video-Fetcher" >Github</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-8">
+                    
+                    <div ng-view></div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>

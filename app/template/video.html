@@ -1,0 +1,161 @@
+<div class="panel panel-default" ng-controller="VideoController">
+   <div class="panel-heading">视频下载</div>
+    <div class="panel-body">
+        <table class="table table-striped">
+            <tr>
+                <th>下载地址</th>
+                <th>视频时长</th>
+                <th>文件大小</th>
+            </tr>
+            <tbody>
+                <tr>
+
+                    <td>
+                        <a href="{{play.url}}">主地址</a>
+                        <a href="{{bak1}}">备用1</a>
+                        <a href="{{bak2}}">备用2</a>
+                    </td>
+                    <td>{{play.time}}</td>
+                    <td>{{play.size}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+   <div class="panel-heading">视频信息</div>
+    <div class="panel-body">
+        <h2 ng-model="title">{{title}}<small>视频信息</small></p></h2>
+        <table class="table table-striped">
+            <tr>
+                <th>项</th>
+                <th>值</th>
+            </tr>
+            <tbody>
+                <tr>
+                    <td>tid</td>
+                    <td>{{videoInfo.tid }}</td>
+                </tr>
+                <tr>
+                    <td>typename</td>
+                    <td>{{videoInfo.typename }}</td>
+                </tr>
+                <tr>
+                    <td>arctype</td>
+                    <td>{{videoInfo.arctype }}</td>
+                </tr>
+                <tr>
+                    <td>play</td>
+                    <td>{{videoInfo.play }}</td>
+                </tr>
+                <tr>
+                    <td>review</td>
+                    <td>{{videoInfo.review }}</td>
+                </tr>
+                <tr>
+                    <td>video_review</td>
+                    <td>{{videoInfo.video_review }}</td>
+                </tr>
+                <tr>
+                    <td>favorites</td>
+                    <td>{{videoInfo.favorites }}</td>
+                </tr>
+                <tr>
+                    <td>title</td>
+                    <td>{{videoInfo.title }}</td>
+                </tr>
+                <tr>
+                    <td>allow_bp</td>
+                    <td>{{videoInfo.allow_bp }}</td>
+                </tr>
+                <tr>
+                    <td>allow_feed</td>
+                    <td>{{videoInfo.allow_feed }}</td>
+                </tr>
+                <tr>
+                    <td>allow_download</td>
+                    <td>{{videoInfo.allow_download }}</td>
+                </tr>
+                <tr>
+                    <td>tag</td>
+                    <td>{{videoInfo.tag }}</td>
+                </tr>
+                <tr>
+                    <td>pic</td>
+                    <td><img src="{{videoInfo.pic }}"></td>
+                </tr>
+                <tr>
+                    <td>author</td>
+                    <td>{{videoInfo.author }}</td>
+                </tr>
+                <tr>
+                    <td>mid</td>
+                    <td>{{videoInfo.mid }}</td>
+                </tr>
+                <tr>
+                    <td>face</td>
+                    <td>{{videoInfo.face }}</td>
+                </tr>
+                <tr>
+                    <td>pages</td>
+                    <td>{{videoInfo.pages }}</td>
+                </tr>
+                <tr>
+                    <td>instant_server</td>
+                    <td>{{videoInfo.instant_server }}</td>
+                </tr>
+                <tr>
+                    <td>created</td>
+                    <td>{{videoInfo.created }}</td>
+                </tr>
+                <tr>
+                    <td>created_at</td>
+                    <td>{{videoInfo.created_at }}</td>
+                </tr>
+                <tr>
+                    <td>credit</td>
+                    <td>{{videoInfo.credit }}</td>
+                </tr>
+                <tr>
+                    <td>coins</td>
+                    <td>{{videoInfo.coins }}</td>
+                </tr>
+                <tr>
+                    <td>spid</td>
+                    <td>{{videoInfo.spid }}</td>
+                </tr>
+                <tr>
+                    <td>src</td>
+                    <td>{{videoInfo.src }}</td>
+                </tr>
+                <tr>
+                    <td>sp_title</td>
+                    <td>{{videoInfo.sp_title }}</td>
+                </tr>
+                <tr>
+                    <td>season_id</td>
+                    <td>{{videoInfo.season_id }}</td>
+                </tr>
+                <tr>
+                    <td>season_index</td>
+                    <td>{{videoInfo.season_index }}</td>
+                </tr>
+                <tr>
+                    <td>season_episode</td>
+                    <td>{{videoInfo.season_episode }}</td>
+                </tr>
+                <tr>
+                    <td>cid</td>
+                    <td>{{videoInfo.cid }}</td>
+                </tr>
+                <tr>
+                    <td>partname</td>
+                    <td>{{videoInfo.partname }}</td>
+                </tr>
+                <tr>
+                    <td>offsite</td>
+                    <td>{{videoInfo.offsite }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</div>

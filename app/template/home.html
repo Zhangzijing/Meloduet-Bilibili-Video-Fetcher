@@ -1,0 +1,35 @@
+<div class="alert alert-success" role="alert"><b>ヾ (o ° ω ° O ) ノ゙</b>Hi! 到<a target="_blank" href="https://github.com/Zhangzijing/Meloduet-Bilibili-Video-Fetcher">Github</a> 给我们一颗星吧~
+    <a href="https://github.com/Zhangzijing/Meloduet-Bilibili-Video-Fetcher" target="_blank"><img src="image/star.png" /></a>
+</div>
+<div class="panel panel-default" ng-controller="HomeController">
+    <div class="panel-heading">十秒钟看完教程</div>
+    <div class="panel-body">
+        直接复制<mark>播放页面</mark>的网址, 然后<mark>粘贴</mark>到下面的框里点击[解析]即可获得下载地址
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">开始使用!</h3>
+    </div>
+    <div class="panel-body">
+        <div hidden="true">
+            <p><strong>选择下载的版本: </strong><small> (通常, 电脑版分辨率较高, 手机版分辨率较低)</small></p>
+            <label class="checkbox-inline">
+                              <input type="radio" name="optionsRadiosinline" id="optionsRadios3" 
+                                 value="option1" checked>电脑版
+                           </label>
+            <label class="checkbox-inline">
+                              <input type="radio" name="optionsRadiosinline" id="optionsRadios4" 
+                                 value="option2">手机版
+                           </label>
+            
+        </div>
+        <p><strong>输入地址</strong></p>
+        <div class="input-group">
+            <input class="form-control" type="text" ng-model="url" placeholder="Bilibili地址, 包含aid(avxxxx)即可" />
+            <span class="input-group-btn"><button ng-click="parse()" type="button" class="btn btn-default" >解析</button></span>
+        </div>
+        <br />
+    </div>
+</div>
