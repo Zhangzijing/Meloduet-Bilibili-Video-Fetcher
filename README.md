@@ -1,0 +1,14 @@
+# Meloduet-Bilibili-Video-Fetcher
+Meloduet Bilibili Video Fetcher是一个开源的Bilibili辅助工具, 你可以把它用来方便地获取视频的真实地址以便于下载或其它用途.
+
+基于AngularJs框架, jQuery和bootstrap库
+
++ 在线演示地址: [Demo](http://www.meloduet.com/bilibili/index.html#/home.html)
+
++ 我的博客 [void](http://void.meloduet.com)
+
+这是我的第一个js项目, 希望大家喜欢. 还会增加更多功能.
+
+截图(页面经过手动缩放):
+
+![](http://i1.piimg.com/4851/93ad1f0445de6c05.jpg)
