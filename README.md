@@ -5,7 +5,7 @@ Meloduet Bilibili Video Fetcher是一个开源的Bilibili辅助工具, 你可以
 
 + 在线演示地址: [Demo](http://www.meloduet.com/bilibili/index.html#/home.html)
 
-+ 我的博客 [void](http://void.meloduet.com)
++ 我的博客 [void](https://v.meloduet.com)
 
 这是我的第一个js项目, 希望大家喜欢. 还会增加更多功能.
 
