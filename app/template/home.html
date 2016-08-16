@@ -1,18 +1,3 @@
-
-<div class="alert alert-success" role="alert">
-	<b>ヾ (o ° ω ° O ) ノ゙</b>Hi! 到<a target="_blank" href="https://github.com/Zhangzijing/Meloduet-Bilibili-Video-Fetcher">Github</a> 给我们一颗星吧~
-    <a href="https://github.com/Zhangzijing/Meloduet-Bilibili-Video-Fetcher" target="_blank"><img src="image/star.png" /></a>
-</div>
-<div class="alert alert-info" role="alert">
-	<b>感谢使用!</b> 你可以把它部署在自己的网站上, 或者也可以Ctrl+D收藏本站以后使用. <br />持续更新中, 需要什么功能跟我说吧
-</div>
-<div class="panel panel-default" ng-controller="HomeController">
-    <div class="panel-heading">十秒钟看完教程</div>
-    <div class="panel-body">
-        直接复制<mark>播放页面</mark>的网址, 然后<mark>粘贴</mark>到下面的框里点击[解析]即可获得下载地址
-    </div>
-</div>
-
 <div class="panel panel-default">
     <div class="panel-heading">
         <h3 class="panel-title">开始使用!</h3>
@@ -32,9 +17,26 @@
         </div>
         <p><strong>输入地址</strong></p>
         <div class="input-group">
-            <input class="form-control" type="text" ng-model="url" placeholder="Bilibili地址, 包含aid(avxxxx)即可" />
-            <span class="input-group-btn"><button ng-click="parse()" type="button" class="btn btn-default" >解析</button></span>
+            <input ng-keyup="myKeyup($event)" class="form-control" type="text" ng-model="url" placeholder="Bilibili地址, 包含aid(avxxxx)即可" />
+            <span class="input-group-btn"><button ng-click="parse()" type="button" class="btn btn-default" >解析下载</button></span>
+            
+            <span class="input-group-btn"><button ng-click="parse_batch()" type="button" class="btn btn-default" >解析并批量下载</button></span>
         </div>
         <br />
     </div>
 </div>
+<div class="alert alert-success" role="alert">
+	<b>ヾ (o ° ω ° O ) ノ゙</b>Hi! 到<a target="_blank" href="https://github.com/Zhangzijing/Meloduet-Bilibili-Video-Fetcher">Github</a> 给我们一颗星吧~
+    <a href="https://github.com/Zhangzijing/Meloduet-Bilibili-Video-Fetcher" target="_blank"><img src="image/star.png" /></a>
+</div>
+<div class="alert alert-info" role="alert">
+	<b>感谢使用!</b> 你可以把它部署在自己的网站上, 或者也可以Ctrl+D收藏本站以后使用. <br />持续更新中, 需要什么功能跟我说吧
+</div>
+<div class="panel panel-default" ng-controller="HomeController">
+    <div class="panel-heading">十秒钟看完教程</div>
+    <div class="panel-body">
+        直接复制<mark>播放页面</mark>的网址, 然后<mark>粘贴</mark>到上的框里点击[解析]即可获得下载地址
+        <br />如果想要一次性下载全部分集, 点击批量下载即可!
+    </div>
+</div>
+

@@ -14,16 +14,21 @@ function getAidFromStr(str) {
  * 获取视频信息并用所给函数处理, 已经过验证, 失败返回-1, 正确返回示例:
  *
 */
-function getVideoInfo(aid,onSuccess,onFailed) {
+function getVideoInfo(aid,onSuccess,onFailed,page=1) {
     //http://api.bilibili.com/view?type=json&appkey=8e9fc618fbd41e28&id=102279
+   var url_o = "http://api.bilibili.com/view?type=jsonp&appkey=8e9fc618fbd41e28&id=" + aid + "&page=" + page;
+    console.log(page);
     $.ajax({
         type: "GET",
-        url: "http://api.bilibili.com/view?type=jsonp&appkey=8e9fc618fbd41e28&id=" + aid,
+        url: url_o,
         dataType: "jsonp",
     }).success(function(data) {
-         //console.log(data);
+         console.log(data);
          if(data.title==undefined)
-    			onFailed();
+    			{
+    				onFailed();
+    				//log("getVideoInfo",  data)
+    			}
     	else
          	onSuccess(data);
          return;
@@ -32,8 +37,9 @@ function getVideoInfo(aid,onSuccess,onFailed) {
     });
 }
 
+
 function getVideoAllFormat(cid,onSuccess,onFailed) {
-	var argument =  ("cid="+cid+"&appkey=f3bb208b3d081dc8&type=hdmp4&otype=json");
+	var argument =  ("cid="+cid+"&appkey=f3bb208b3d081dc8&otype=json&quality=3");
     var url_proxy = "playurl.php?argument="+escape(argument);
     console.log(url_proxy);
     $.ajax({
@@ -41,6 +47,7 @@ function getVideoAllFormat(cid,onSuccess,onFailed) {
         url: url_proxy,
         dataType: "json",
     }).success(function(data) {
+    	//console.log("getVideoAllFormat",data)
          onSuccess(data);
     }).fail(function(){
         onFailed
@@ -134,3 +141,4 @@ function bytesToSize(bytes) {
     return (bytes / Math.pow(k, i)).toPrecision(4) + ' ' + sizes[i] ;   
        //toPrecision(3) 后面保留一位小数，如1.0GB                                                                                                                  //return (bytes / Math.pow(k, i)).toPrecision(3) + ' ' + sizes[i];  
 }  
+

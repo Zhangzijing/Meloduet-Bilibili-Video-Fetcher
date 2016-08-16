@@ -1,4 +1,4 @@
-<div class="panel panel-default" ng-controller="VideoController">
+<div class="panel panel-default">
    <div class="panel-heading">视频下载{{status}}</div>
     <div class="panel-body">
         <table class="table table-striped">
@@ -20,7 +20,21 @@
                 </tr>
             </tbody>
         </table>
+        <table class="table table-striped">
+            <tr>
+                <th>弹幕文件</th>
+            </tr>
+            <tbody>
+                <tr>
+
+                    <td>
+                        <a href="http://comment.bilibili.com/{{videoInfo.cid }}.xml">弹幕下载</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
+    
    <div class="panel-heading">视频信息</div>
     <div class="panel-body">
         <h2 ng-model="title">{{title}}<small>视频信息</small></p></h2>

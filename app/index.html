@@ -30,26 +30,26 @@
             <div class="row">
                 <blockquote>
                     <p class="lead" style="text-indent:2em;">
-                        Meloduet Bilibili Video Fetcher是一个开源的Bilibili辅助工具, 你可以把它用来方便地获取视频的真实地址以便于下载或其它用途.
+                        Meloduet Bilibili Video Fetcher是一个开源的Bilibili辅助工具, 你可以把它用来方便地<mark>获取视频的真实地址</mark>以便于下载或其它用途, 也可以<mark>批量下载</mark>视频, 以及<mark>下载弹幕文件</mark>.
                     </p>
                 </blockquote>
                 <hr />
             </div>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <ul class="nav nav-pills nav-stacked">
                         <li role="presentation" ng-class="{ 'active': 0 == Page.index() }">
-                            <a href="#/home.html">首页</a>
+                            <a href="#/home">首页</a>
                         </li>
-                        <li role="presentation" ng-class="{ 'active': 1 == Page.index() }">
-                            <a href="#/about.html">关于</a>
+                        <li role="presentation" ng-class="{ 'active': 999 == Page.index() }">
+                            <a href="#/about">关于</a>
                         </li>
                         <li role="presentation">
                             <a href="https://github.com/Zhangzijing/Meloduet-Bilibili-Video-Fetcher" >Github</a>
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-9">
                     
                     <div ng-view></div>
                 </div>
