@@ -57,10 +57,10 @@ function AboutController($scope, Page) {
 function VideoController($scope, Page, $routeParams) {
 
     Page.setIndex(-1);
-    $scope.title = "加载中...";
-    $scope.videoInfo = new VideoInfo();
+    $scope.title = "加载中...";    
     log("VideoController.aid", $routeParams.aid)
     getVideoInfo($routeParams.aid, function(vi) {
+    	
             var vi = $.extend(new VideoInfo(), vi)
             log("VideoController", vi.title);
             $scope.$apply(function() {

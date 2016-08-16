@@ -30,7 +30,9 @@ function getVideoInfo(aid,onSuccess,onFailed) {
 }
 
 function getVideoAllFormat(cid,onSuccess,onFailed) {
-    var url_proxy = "playurl.php?cid="+cid;
+	var argument =  ("cid="+cid+"&appkey=f3bb208b3d081dc8&type=hdmp4&otype=json");
+    var url_proxy = "playurl.php?argument="+escape(argument);
+    console.log(url_proxy);
     $.ajax({
         type: "GET",
         url: url_proxy,
