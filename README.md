@@ -9,6 +9,11 @@ Meloduet Bilibili Video Fetcher是一个开源的Bilibili辅助工具, 你可以
 
 这是我的第一个js项目, 希望大家喜欢. 还会增加更多功能.
 
+现已支持:
+
++ 批量下载
++ 弹幕下载
+
 截图(页面经过手动缩放):
 
 ![](http://i1.piimg.com/4851/93ad1f0445de6c05.jpg)
