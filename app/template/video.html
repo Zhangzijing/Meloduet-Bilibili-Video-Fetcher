@@ -1,5 +1,5 @@
 <div class="panel panel-default" ng-controller="VideoController">
-   <div class="panel-heading">视频下载</div>
+   <div class="panel-heading">视频下载{{status}}</div>
     <div class="panel-body">
         <table class="table table-striped">
             <tr>
@@ -15,8 +15,8 @@
                         <a href="{{bak1}}">备用1</a>
                         <a href="{{bak2}}">备用2</a>
                     </td>
-                    <td>{{play.time}}</td>
-                    <td>{{play.size}}</td>
+                    <td>{{timeParse(play.length)}}</td>
+                    <td>{{sizeParse(play.size)}}</td>
                 </tr>
             </tbody>
         </table>

@@ -22,7 +22,10 @@ function getVideoInfo(aid,onSuccess,onFailed) {
         dataType: "jsonp",
     }).success(function(data) {
          //console.log(data);
-         onSuccess(data);
+         if(data.title==undefined)
+    			onFailed();
+    	else
+         	onSuccess(data);
          return;
     }).fail(function(){
         onFailed();
@@ -97,3 +100,37 @@ function VideoInfo() {
 function log(tag,info){
     console.log(tag + ", " + info);
 }
+
+
+function millisecondToDate(msd) {
+    var time = parseFloat(msd) / 1000;
+    if (null != time && "" != time) {
+        if (time > 60 && time < 60 * 60) {
+            time = parseInt(time / 60.0) + "分钟" + parseInt((parseFloat(time / 60.0) -
+                parseInt(time / 60.0)) * 60) + "秒";
+        }
+        else if (time >= 60 * 60 && time < 60 * 60 * 24) {
+            time = parseInt(time / 3600.0) + "小时" + parseInt((parseFloat(time / 3600.0) -
+                parseInt(time / 3600.0)) * 60) + "分钟" +
+                parseInt((parseFloat((parseFloat(time / 3600.0) - parseInt(time / 3600.0)) * 60) -
+                parseInt((parseFloat(time / 3600.0) - parseInt(time / 3600.0)) * 60)) * 60) + "秒";
+        }
+        else {
+            time = parseInt(time) + "秒";
+        }
+    }
+    return time;
+}
+
+function bytesToSize(bytes) {  
+       if (bytes === 0) return '0 B';  
+  
+        var k = 1024;  
+  
+        var sizes = ['B','KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];  
+  
+        var i = Math.floor(Math.log(bytes) / Math.log(k));  
+  
+    return (bytes / Math.pow(k, i)).toPrecision(4) + ' ' + sizes[i] ;   
+       //toPrecision(3) 后面保留一位小数，如1.0GB                                                                                                                  //return (bytes / Math.pow(k, i)).toPrecision(3) + ' ' + sizes[i];  
+}  

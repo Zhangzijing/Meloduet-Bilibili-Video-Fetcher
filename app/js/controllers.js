@@ -58,6 +58,9 @@ function VideoController($scope, Page, $routeParams) {
 
     Page.setIndex(-1);
     $scope.title = "加载中...";    
+    $scope.status = "(解析中)"
+    $scope.timeParse =  millisecondToDate;
+    
     log("VideoController.aid", $routeParams.aid)
     getVideoInfo($routeParams.aid, function(vi) {
     	
@@ -70,21 +73,27 @@ function VideoController($scope, Page, $routeParams) {
             })
             getVideoAllFormat($scope.videoInfo.cid,
                 function(data) {
-                    console.log(data);
                     $scope.$apply(function() {
                         $scope.play=data.durl[0];
+                        console.log(data);
                         $scope.bak1=$scope.play.backup_url[0];
                         $scope.bak2=$scope.play.backup_url[1];
+                        $scope.status = "(可以下载了!)"
+                        $scope.sizeParse =  bytesToSize;
                     })
                 },
                 function() {
                     $scope.$apply(function() {
                         console.log("failed");
+                         window.location.href = "#/404.html";
                     })
                 });
 
         },
         function() {
+        	$scope.$apply(function() {
+                        console.log("failed");
+                    })
             window.location.href = "#/404.html";
         });
 
