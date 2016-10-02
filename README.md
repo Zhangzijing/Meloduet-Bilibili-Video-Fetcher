@@ -1,4 +1,7 @@
 # Meloduet-Bilibili-Video-Fetcher
+
+**本项目已停止, 新版本已启动, 请获取[桌面版BilibiliVideoFetcher](https://github.com/Meloduet/Wpf-BilibiliVideoFetcher)**
+
 Meloduet Bilibili Video Fetcher是一个开源的Bilibili辅助工具, 你可以把它用来方便地获取视频的真实地址以便于下载或其它用途.
 
 基于AngularJs框架, jQuery和bootstrap库
